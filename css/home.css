@@ -1,0 +1,15 @@
+/*this is the work around I found for keeping my footer out of my carousel*/
+
+.footer {
+    position: relative !important;
+    bottom: 0;
+    width: 100%;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .footer{
+    position: absolute !important;
+  }
+  .carousel-caption{
+    display: none;
+  }
+}

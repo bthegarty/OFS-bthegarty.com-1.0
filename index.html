@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <!-- this is for the tab icon -->
+  <!-- <i rel="icon" class="fa fa-space-shuttle" aria-hidden="true"></i> -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <!-- SCROLLS -->
+  <link href = "css/hegarty-staging-style.css" rel = "stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+  <script src="https://use.fontawesome.com/5682bd9388.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+<div id="wrapper">
+  <div id="main">
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+</div>
+<!-- <div class="nav-mobile"> -->
+    <nav class="topnav" id="myTopnav">
+      <ul class="nav navbar-nav">
+          <li class="brand nav-item"><strong>Hegarty </i></strong></li>
+            <li class="nav-item"><a id="focus" class="active" ng-href="#">Home</a></li>
+              <li class="nav-item"><a ng-href="#about">About</a></li>
+              <li class="nav-item"><a href="#career">Career</a></li>
+              <li class="nav-item"><a href="#abroad">Abroad</a></li>
+              <li class="nav-item"><a href="#resume">Resume</a></li>
+              <li class="right nav-item" id="rightnav"><a href="#more">Learn More <i class="fa fa-cog" aria-hidden="true"></i></a></li>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </ul>
+    </nav>
+  <!-- </div> -->
+</body>
+
+<script>
+// this function is used for condensing the above nav into a hamburger nav. look for styling in style.css
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<div class="footer"><hr>
+    <div id="center" class="center"><p>Brendan Hegarty - Marist College 2017 - Last Updated 11/16/2017</p>
+    </div>
+  <!-- Social links here -->
+    <div id="right" class="right">
+      <a target="_blank" href="https://github.com/bthegarty"><i id="social-gt" class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/brendan-hegarty-a91186104/"><i id="social-in" class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://www.facebook.com/brendan.hegarty.14"><i id="social-fa" class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://www.instagram.com/b_hegs1/?hl=en"><i id="social-ig" class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+    </div>
+<hr></div>
+</html>
